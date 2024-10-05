@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Web Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Font awesome cdn-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <!-- Navigation Bar -->
     <section class="header">
       <div class="container">
         <nav class="navbar">
-          <div class="logo"><a href="#">Website</a></div>
+          <div class="logo"><a href="#"><span style="color: darkcyan;">W</span>ebsite</a></div>
           <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -53,32 +55,41 @@
     </section>
 
      <!-- Cards Section -->
-      <div class="products">
-        Featured Products
+      <div class="work">
+        Work Process
       </div>
-     <section class="cards-section container">
+      <div class="container">
+     <section class="cards-section">
 
         <div class="card">
-            <img src="image1.jpg" alt="Image 1">
-            <h3>Card Title 1</h3>
-            <p>Description for card 1.</p>
+            <i class="fa-solid fa-file-pen" style="font-size: 48px; color: darkcyan"></i>
+            <h3>Planning</h3>
+            <p>Identify the app's purpose, features, and technology stack by researching and outlining key objectives.</p>
         </div>
         <div class="card">
-            <img src="image2.jpg" alt="Image 2">
-            <h3>Card Title 2</h3>
-            <p>Description for card 2.</p>
+            <i class="fa-solid fa-object-group" style="font-size: 48px; color: darkcyan"></i>
+            <h3>Design</h3>
+            <p>Create user-friendly UI/UX designs and prototypes, ensuring a visually appealing and responsive interface.</p>
         </div>
         <div class="card">
-            <img src="image3.jpg" alt="Image 3">
-            <h3>Card Title 3</h3>
-            <p>Description for card 3.</p>
+            <i class="fa-solid fa-laptop-code" style="font-size: 48px; color: darkcyan"></i>
+            <h3>Development</h3>
+            <p>Build the frontend and backend, integrate APIs, and set up the database to implement the app's functionality.</p>
         </div>
         <div class="card">
-            <img src="image4.jpg" alt="Image 4">
-            <h3>Card Title 4</h3>
-            <p>Description for card 4.</p>
+            <i class="fa-solid fa-truck" style="font-size: 48px; color: darkcyan"></i>
+            <h3>Delivery</h3>
+            <p>Test the app for bugs and performance issues, deploy it to a hosting platform, and monitor for ongoing improvements.</p>
         </div>
     </section>
+    </div>
+
+    <!-- Footer section -->
+     <section class="footer">
+      <footer class="container">
+        <p>&copy;All rights reserved. Designed by <a href="https://www.linkedin.com/in/developerfahad/" style="color: darkcyan;">developerfahad</a></p>
+      </footer>
+     </section>
 
     <script src="script.js"></script>
   </body>
