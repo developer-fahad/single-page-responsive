@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.header > .container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.header{
+   
+    border-bottom: 1px solid rgb(189, 189, 189);
+    
+}
+/* Navbar Styling */
+.navbar {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Nav Links (For large device) */
+.nav-links {
+    display: none;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+/* Hamburger Styling */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Drawer Menu (For smaller devices) */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    padding-top: 29px;
+    background-color: #00000f;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+}
+.drawer h1 {
+    color: white;
+    text-align: right;
+    padding-right: 24px;
+    
+}
+.drawer hr {
+    border: 1px solid rgb(189, 189, 189);
+    
+}
+.drawer ul {
+    color: white;
+    text-align: right;
+    padding-right: 24px;
+}
+
+.drawer-links {
+    list-style: none;
+    text-align: center;
+}
+
+.drawer-links li {
+    margin: 1.5rem 0;
+}
+
+.drawer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* When drawer will open */
+.drawer.open {
+    right: 0;
+}
+
+/* Responsive for mobile device */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .header > .container{
+        padding: 0 6px;
+    }
+}
+
+@media (min-width: 768px) {
+    .drawer {
+        display: none; 
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .header > .container{
+        padding: 0 6px;
+    }
+}
