@@ -1,138 +1,256 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Container styling */
-.header > .container{
-    max-width: 1180px;
-    margin: 0 auto;
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 /* Header styling */
-.header{
-   
-    border-bottom: 1px solid rgb(189, 189, 189);
-    
+.header {
+  border-bottom: 1px solid rgb(189, 189, 189);
 }
 /* Navbar Styling */
 .navbar {
-    min-height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo a{
-    font-size: 36px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #00000f;
+.logo a {
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00000f;
 }
 
 /* Nav Links (For large device) */
 .nav-links {
-    display: none;
-    list-style: none;
+  display: none;
+  list-style: none;
 }
 
 .nav-links li {
-    display: inline-block;
-    margin-left: 1.5rem;
+  display: inline-block;
+  margin-left: 1.5rem;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    font-size: 22px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 22px;
 }
 
 /* Hamburger Styling */
 .hamburger {
-    font-size: 2rem;
-    cursor: pointer;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* Drawer Menu (For smaller devices) */
 .drawer {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 250px;
-    height: 100vh;
-    padding-top: 29px;
-    background-color: #00000f;
-    display: flex;
-    flex-direction: column;
-    transition: right 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  padding-top: 29px;
+  background-color: #00000f;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
 }
 .drawer h1 {
-    color: white;
-    text-align: right;
-    padding-right: 24px;
-    
+  color: white;
+  text-align: right;
+  padding-right: 24px;
 }
 .drawer hr {
-    border: 1px solid rgb(189, 189, 189);
-    
+  border: 1px solid rgb(189, 189, 189);
 }
 .drawer ul {
-    color: white;
-    text-align: right;
-    padding-right: 24px;
+  color: white;
+  text-align: right;
+  padding-right: 24px;
 }
 
 .drawer-links {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 .drawer-links li {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .drawer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 /* When drawer will open */
 .drawer.open {
-    right: 0;
+  right: 0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://i.ibb.co.com/xSjDY2S/pexels-lilen-diaz-1025474869-28357744.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  /* border: 1px solid salmon; */
+}
+
+.content-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-wrapper h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-wrapper p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #1d4ed8; /* Primary color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2563eb; /* Slightly lighter blue on hover */
+}
+
+/* Cards Section */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.card h3 {
+  margin-top: 1rem;
+}
+.card p {
+  margin-top: 0.5rem;
 }
 
 /* Responsive for mobile device */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; 
-    }
+@media (max-width: 769px) {
+  .nav-links {
+    display: none;
+  }
 
-    .hamburger {
-        display: block;
-    }
-    .header > .container{
-        padding: 0 6px;
-    }
+  .hamburger {
+    display: block;
+  }
+
+  .container {
+    padding: 0 6px;
+  }
+
+  .content-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .cards-section {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: auto; */
+  }
+  .products {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+
+/* 2 cards for medium screens (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1025px) {
+  .cards-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 4 cards for large screens (above 1024px) */
+@media (min-width: 1025px) {
+  .cards-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
-    .drawer {
-        display: none; 
-    }
+  .drawer {
+    display: none;
+  }
 
-    .nav-links {
-        display: flex;
-    }
+  .nav-links {
+    display: flex;
+  }
 
-    .hamburger {
-        display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 
-    .header > .container{
-        padding: 0 6px;
-    }
+  .header > .container {
+    padding: 0 6px;
+  }
 }
